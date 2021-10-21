@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/f36d433414.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 500px;">
+     <h1>Mostrar datos</h1>
+     <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Mentor</th>
+      <th scope="col">Mentorizado</th>
+      <th scope="col">Carrera</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for user in info %}
+    <tr>
+      <td>{{ user[0] }}</td>
+      <td>{{ user[1] }}</td>
+      <td>{{ user[2] }}</td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+</article>
+</div>
+</body>
+</html>
